@@ -1,0 +1,9 @@
+@import "typography.scss";
+
+html,
+body {
+  background: #000 !important;
+  font-family: "Graphik", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

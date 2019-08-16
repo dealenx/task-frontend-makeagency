@@ -1,24 +1,29 @@
-@include font-face("Graphik", "../fonts/Graphik/Graphik-Regular-Web");
+@include font-face("Graphik", "../assets/fonts/Graphik/Graphik-Regular-Web");
 
 @include font-face(
   "Graphik",
-  "../fonts/Graphik/Graphik-RegularItalic-Web",
+  "../assets/fonts/Graphik/Graphik-RegularItalic-Web",
   normal,
   italic
 );
 
 @include font-face(
   "Graphik",
-  "../fonts/Graphik/Graphik-Medium-Web",
+  "../assets/fonts/Graphik/Graphik-Medium-Web",
   500,
   normal
 );
 
-@include font-face("Graphik", "../fonts/Graphik/Graphik-Bold-Web", 700, normal);
+@include font-face(
+  "Graphik",
+  "../assets/fonts/Graphik/Graphik-Bold-Web",
+  700,
+  normal
+);
 
 @include font-face(
   "Graphik",
-  "../fonts/Graphik/Graphik-Black-Web",
+  "../assets/fonts/Graphik/Graphik-Black-Web",
   900,
   normal
 );
