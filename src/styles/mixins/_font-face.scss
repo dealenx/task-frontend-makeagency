@@ -7,7 +7,6 @@
 /// @param {Boolean} $asset-pipeline - При false src: font-url(...), а при true src: url(...)
 /// @example scss - Подключение шрифты Graphik-Bold-Web со значениями weight: 700, style: normal
 ///   @include font-face("Graphik", "../fonts/Graphik/Graphik-Bold-Web", 700, normal);
-
 @mixin font-face(
   $font-family,
   $file-path,
