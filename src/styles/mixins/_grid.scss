@@ -1,0 +1,10 @@
+@mixin grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media only screen and (max-width: 768px) {
+    max-width: 500px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
