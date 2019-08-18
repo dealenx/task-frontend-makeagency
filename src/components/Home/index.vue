@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
 
     <section class="my-main">
       <div class="col-2">1</div>
@@ -13,10 +12,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String
-  }
+  name: "HelloWorld"
 };
 </script>
 

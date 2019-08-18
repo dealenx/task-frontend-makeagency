@@ -1,15 +1,17 @@
+@import "reset.scss";
 @import "typography.scss";
 
 html,
 body {
-  background: #000 !important;
+  background: white !important;
   font-family: "Graphik", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #app {
-  text-align: center;
-  color: #fff;
-  margin-top: 60px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
