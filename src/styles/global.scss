@@ -7,11 +7,15 @@ body {
   font-family: "Graphik", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include p-16;
+  color: #1b1b1b;
 }
 
 #app {
   color: white;
   display: flex;
+  @include p-16;
   flex-direction: column;
   align-items: center;
+  color: #1b1b1b;
 }

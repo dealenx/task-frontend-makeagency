@@ -1,28 +1,13 @@
+/// https://rimdev.io/making-media-query-mixins-with-sass/
+
 @mixin breakpoint($breakpoint, $direction) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    // Get the breakpoint value.
-    $breakpoint-value: map-get($breakpoints, $breakpoint);
-
-    @if $direction == max {
-      @media (max-width: ($breakpoint-value - 1)) {
-        @content;
-      }
-    } @else if $direction == min {
-      @media (min-width: $breakpoint-value) {
-        @content;
-      }
+  @if $direction == max {
+    @media (max-width: $breakpoint) {
+      @content;
     }
-
-    // If the breakpoint doesn't exist in the map.
-  } @else {
-    @if $direction == max {
-      @media (max-width: $breakpoint) {
-        @content;
-      }
-    } @else if $direction == min {
-      @media (min-width: $breakpoint) {
-        @content;
-      }
+  } @else if $direction == min {
+    @media (min-width: $breakpoint) {
+      @content;
     }
   }
 }

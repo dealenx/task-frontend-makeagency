@@ -1,29 +1,110 @@
-@include font-face("Graphik", "../assets/fonts/Graphik/Graphik-Regular-Web");
+@include font-face("Graphik", "~@/assets/fonts/Graphik/Graphik-Regular-Web");
 
 @include font-face(
   "Graphik",
-  "../assets/fonts/Graphik/Graphik-RegularItalic-Web",
+  "~@/assets/fonts/Graphik/Graphik-RegularItalic-Web",
   normal,
   italic
 );
 
 @include font-face(
   "Graphik",
-  "../assets/fonts/Graphik/Graphik-Medium-Web",
+  "~@/assets/fonts/Graphik/Graphik-Medium-Web",
   500,
   normal
 );
 
 @include font-face(
   "Graphik",
-  "../assets/fonts/Graphik/Graphik-Bold-Web",
+  "~@/assets/fonts/Graphik/Graphik-Bold-Web",
   700,
   normal
 );
 
 @include font-face(
   "Graphik",
-  "../assets/fonts/Graphik/Graphik-Black-Web",
+  "~@/assets/fonts/Graphik/Graphik-Black-Web",
   900,
   normal
 );
+
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+
+  @include breakpoint($tablet, max) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+
+  @include breakpoint($tablet, max) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+
+  @include breakpoint($tablet, max) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+h4 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+
+  @include breakpoint($tablet, max) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@mixin p-lead {
+  font-size: 24px;
+  line-height: 32px;
+
+  @include breakpoint($tablet, max) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@mixin p-18 {
+  font-size: 18px;
+  line-height: 28px;
+
+  @include breakpoint($tablet, max) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@mixin p-16 {
+  font-size: 16px;
+  line-height: 24px;
+
+  @include breakpoint($tablet, max) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin p-14 {
+  font-size: 14px;
+  line-height: 20px;
+
+  @include breakpoint($tablet, max) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

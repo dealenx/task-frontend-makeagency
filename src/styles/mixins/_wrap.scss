@@ -1,7 +1,13 @@
 @mixin wrap {
   width: 1072px;
 
-  @media only screen and (max-width: 768px) {
-    max-width: 500px;
+  @include breakpoint($tablet, min) {
+    @include breakpoint($laptop, max) {
+      width: 672px;
+    }
+  }
+
+  @include breakpoint($tablet, max) {
+    width: 296px;
   }
 }

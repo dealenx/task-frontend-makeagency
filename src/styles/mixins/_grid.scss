@@ -1,13 +1,15 @@
-@import "wrap";
-
 @mixin grid {
-  @include wrap;
-
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
 
-  @media only screen and (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @include breakpoint($tablet, min) {
+    @include breakpoint($laptop, max) {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @include breakpoint($tablet, max) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

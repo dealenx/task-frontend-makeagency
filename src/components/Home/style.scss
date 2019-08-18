@@ -13,6 +13,7 @@ h3 {
 }
 .my-main {
   @include grid;
+  @include wrap;
 
   div {
     height: 100px;
