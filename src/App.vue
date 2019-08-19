@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <p>Scrolled to bottom: {{ scrolledToBottom }}</p>
     <Header />
     <Home />
   </div>
@@ -7,13 +8,18 @@
 
 <script>
 import Header from "@/components/Header";
-import Home from "@/components/Home";
+import Home from "@/pages/Home";
 
 export default {
   name: "app",
   components: {
     Header,
     Home
+  },
+  data: function() {
+    return {
+      scroll: 0
+    };
   }
 };
 </script>
