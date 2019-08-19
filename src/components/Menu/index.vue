@@ -1,23 +1,6 @@
 <template>
   <transition name="bounce">
-    <div class="site-menu" v-if="isVisible">
-      <button class="site-menu__close" @click="switchVisible">
-        <svg
-          width="34"
-          height="34"
-          viewBox="0 0 34 34"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M18.4142 17L26.1924 9.22184L24.7782 7.80762L17 15.5858L9.22183 7.80762L7.80761 9.22184L15.5858 17L7.80761 24.7782L9.22183 26.1924L17 18.4142L24.7782 26.1924L26.1924 24.7782L18.4142 17Z"
-            fill="white"
-          />
-        </svg>
-      </button>
-
+    <div class="site-menu" v-if="isVisible" v-bind:class="{ visible: isVisible }">
       <div class="site-menu__content">
         <div class="site-menu__logo">
           <svg
@@ -35,14 +18,39 @@
             />
           </svg>
         </div>
-        <div class="site-menu__title">Задание выполнил</div>
-        <div class="site-menu__info">
-          <h1>Heading 1 (48px)</h1>
-          <h2>Heading 2 (32px)</h2>
-          <h3>Heading 3 (24px)</h3>
-          <h4>Heading 4 (18px)</h4>
+        <div class="site-menu__title">
+          <p>Задание выполнил</p>
+          <button class="site-menu__close" @click="switchVisible">
+            <svg
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.4142 17L26.1924 9.22184L24.7782 7.80762L17 15.5858L9.22183 7.80762L7.80761 9.22184L15.5858 17L7.80761 24.7782L9.22183 26.1924L17 18.4142L24.7782 26.1924L26.1924 24.7782L18.4142 17Z"
+                fill="white"
+              />
+            </svg>
+          </button>
         </div>
-        <div class="site-menu__link">123</div>
+        <div class="site-menu__info">
+          <h1>
+            Городилов
+            <br />Даниил Владимирович
+          </h1>
+          <p>Выпускник по специальности «Прикладная математика и информатика» в КемГУ.</p>
+          <a class="site-menu__phone-number" href="tel:+7-904-379-68-97">+7 (904) 379-68-97</a>
+        </div>
+        <div class="site-menu__link">
+          <a href="https://vk.com/dealenx" target="_blank" class="site-menu__link-button">
+            <i></i>
+            <p>Ссылка на соцсеть/мессенджер</p>
+          </a>
+        </div>
       </div>
     </div>
   </transition>
@@ -67,6 +75,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "style.scss";
 </style> 

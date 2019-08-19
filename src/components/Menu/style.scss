@@ -5,6 +5,7 @@
 
 .site-menu {
   position: fixed;
+  // min-height: 100vh;
   height: 100vh;
   width: 100%;
   background: #333;
@@ -12,15 +13,22 @@
   top: 0;
   z-index: 2;
 
+  min-height: 100%;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+
+  @media (max-height: 520px) {
+    overflow-y: scroll;
+    min-height: 100%;
+  }
 
   &::after {
     content: "";
     width: 100%;
     height: 100%;
     background-image: url("~@/assets/img/site-menu/bg.jpg");
-    position: absolute;
+    background-size: cover;
+    position: fixed;
     z-index: 1;
   }
 
@@ -29,6 +37,13 @@
     right: 63.03px;
     top: 28.03px;
     z-index: 4;
+
+    @include breakpoint(900px, max) {
+      position: relative;
+      right: 0px;
+      top: 0px;
+      background: #333;
+    }
   }
 
   &__content {
@@ -38,13 +53,35 @@
     grid-template-areas: "logo title" ". info" ". link";
 
     background: #fff;
+    position: relative;
     width: 760px;
     height: calc(100% - 16px);
     margin-top: 8px;
     margin-left: 8px;
     margin-bottom: 8px;
-
+    box-sizing: border-box;
+    padding-right: 15%;
     z-index: 3;
+
+    @media (max-height: 520px) {
+      height: auto;
+    }
+
+    @include breakpoint(900px, max) {
+      grid-template-areas: "logo title" "info info" "link link";
+      grid-template-columns: 60px 1fr;
+
+      width: calc(100% - 16px);
+      box-sizing: border-box;
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+  }
+
+  &__phone-number {
+    @include p-18;
+    font-weight: 500;
+    margin-top: 32px;
   }
 
   &__logo {
@@ -61,6 +98,10 @@
     width: 40px;
     background: #ff3a62;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+
+    @include breakpoint(900px, max) {
+      margin-left: 0px;
+    }
   }
 
   &__title {
@@ -69,16 +110,62 @@
     color: #7d7d7d;
     height: 88px;
     @include p-14;
-    line-height: 88px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__info {
     grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+      margin-top: 24px;
+    }
   }
 
   &__link {
     grid-area: link;
-    background: #666;
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+  }
+
+  &__link-button {
+    @include p-16;
+    font-weight: 500;
+    color: #3e29e3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include breakpoint(900px, max) {
+      margin-top: 24px;
+    }
+
+    i {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: "";
+        background: url("~@/assets/img/site-menu/link.png");
+        width: 14px;
+        height: 14px;
+      }
+    }
+    p {
+      margin-left: 24px;
+    }
   }
 }
 

@@ -3,19 +3,33 @@
 
 html,
 body {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: white !important;
   font-family: "Graphik", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include p-16;
   color: #1b1b1b;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
 }
 
-#app {
-  color: white;
-  display: flex;
-  @include p-16;
-  flex-direction: column;
-  align-items: center;
+a {
   color: #1b1b1b;
+  text-decoration: none;
+
+  &:hover {
+    color: #3e29e3;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
