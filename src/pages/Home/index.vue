@@ -3,7 +3,7 @@
     <Sidebar class="site-home__sidebar" />
     <div class="site-home__content">
       <section class="my-main">
-        <div v-for="index in 80" :key="index">{{index}}</div>
+        <div v-for="index in 120" :key="index">{{index}}</div>
       </section>
     </div>
   </div>

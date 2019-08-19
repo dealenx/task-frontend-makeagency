@@ -9,6 +9,11 @@
   flex-direction: column;
   margin-top: 168px;
 
+  &.stick {
+    margin-top: 0px;
+    position: fixed;
+  }
+
   li {
     width: 100%;
     @include p-14;

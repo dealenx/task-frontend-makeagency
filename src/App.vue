@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <p>Scrolled to bottom: {{ scrolledToBottom }}</p>
     <Header />
     <Home />
   </div>
