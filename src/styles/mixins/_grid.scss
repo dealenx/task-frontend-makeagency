@@ -3,13 +3,25 @@
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
 
-  @include breakpoint($tablet, min) {
-    @include breakpoint($laptop, max) {
-      grid-template-columns: repeat(8, 1fr);
-    }
+  @include breakpoint-tablet {
+    grid-template-columns: repeat(8, 1fr);
   }
 
-  @include breakpoint($tablet, max) {
+  @include breakpoint-mobile {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@mixin breakpoint-tablet {
+  @include breakpoint($tablet, min) {
+    @include breakpoint($laptop, max) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-mobile {
+  @include breakpoint($tablet, max) {
+    @content;
   }
 }

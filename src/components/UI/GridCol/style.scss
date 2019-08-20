@@ -1,0 +1,17 @@
+////
+/// @group vue-UI-Grid
+/// @author dealenx
+////
+
+.ui-grid-col {
+  color: #fff;
+  grid-column: var(--my-size);
+
+  @include breakpoint-tablet {
+    grid-column: var(--my-tablet-size);
+  }
+
+  @include breakpoint-mobile {
+    grid-column: var(--my-mobile-size);
+  }
+}

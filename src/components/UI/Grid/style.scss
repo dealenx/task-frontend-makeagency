@@ -1,0 +1,9 @@
+////
+/// @group vue-UI-Grid
+/// @author dealenx
+////
+
+.ui-grid {
+  @include grid;
+  background: #000;
+}
