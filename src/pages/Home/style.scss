@@ -5,18 +5,9 @@
 
 .site-home {
   @include wrap;
-  display: grid;
-  grid-template-columns: 312px 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "sidebar content";
 
   &__sidebar {
-    grid-area: sidebar;
     margin-top: 168px;
-  }
-
-  &__content {
-    grid-area: content;
   }
 
   @include breakpoint-tablet {
@@ -34,6 +25,7 @@
   }
 
   &__main-info {
+    margin-top: 48px;
     margin-bottom: 16px;
 
     & > h3 {
@@ -63,5 +55,10 @@
     }
   }
   &__subsection-grid-info {
+    display: flex;
+    flex-direction: column;
+    p {
+      @include p-14;
+    }
   }
 }

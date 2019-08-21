@@ -1,11 +1,13 @@
 <template>
-  <div class="site-home">
-    <Sidebar class="site-home__sidebar" />
-    <div class="site-home__content">
+  <grid class="site-home">
+    <grid-col :size="3" class="site-home__sidebar">
+      <Sidebar />
+    </grid-col>
+    <grid-col :size="9" class="site-home__content">
       <!--<grid>
-        <grid-col :size="6" :tablet-size="4">1</grid-col>
-        <grid-col :size="6" :tablet-size="4">2</grid-col>
-         <grid-col v-for="index in 14" :key="index">{{index}}</grid-col> 
+          <grid-col :size="6" :tablet-size="4">1</grid-col>
+          <grid-col :size="6" :tablet-size="4">2</grid-col>
+          <grid-col v-for="index in 14" :key="index">{{index}}</grid-col> 
       </grid>-->
 
       <div class="site-home__main-info">
@@ -20,12 +22,25 @@
         <h3>Десктоп (1200+)</h3>
 
         <div class="site-home__subsection-grid">
-          <div class="site-home__subsection-grid-info"></div>
+          <grid class="site-home__subsection-grid-info">
+            <grid-col :size="2">
+              <p>Контент</p>
+            </grid-col>
+            <grid-col :size="2">
+              <p>Контент</p>
+            </grid-col>
+            <grid-col :size="2">
+              <p>Контент</p>
+            </grid-col>
+            <grid-col :size="2">
+              <p>Контент</p>
+            </grid-col>
+          </grid>
           <img src="@/assets/img/site-home/grid/laptop.jpg" alt />
         </div>
       </div>
-    </div>
-  </div>
+    </grid-col>
+  </grid>
 </template>
 
 <script>

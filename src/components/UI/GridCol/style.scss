@@ -4,7 +4,6 @@
 ////
 
 .ui-grid-col {
-  color: #fff;
   grid-column: var(--my-size);
 
   @include breakpoint-tablet {
