@@ -11,17 +11,3 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-@mixin breakpoint-tablet {
-  @include breakpoint($tablet, min) {
-    @include breakpoint($laptop, max) {
-      @content;
-    }
-  }
-}
-
-@mixin breakpoint-mobile {
-  @include breakpoint($tablet, max) {
-    @content;
-  }
-}

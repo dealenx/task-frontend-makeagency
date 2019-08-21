@@ -1,13 +1,22 @@
 @mixin wrap {
   width: 1072px;
 
-  @include breakpoint($tablet, min) {
-    @include breakpoint($laptop, max) {
-      width: 672px;
-    }
+  @include breakpoint-laptop-extra {
+    width: 1312px;
   }
 
-  @include breakpoint($tablet, max) {
+  @include breakpoint-tablet-extra {
+    width: 928px;
+  }
+
+  @include breakpoint-tablet-min {
+    width: 672px;
+  }
+  @include breakpoint-mobile-extra {
+    width: 424px;
+  }
+
+  @include breakpoint-mobile-min {
     width: 296px;
   }
 }

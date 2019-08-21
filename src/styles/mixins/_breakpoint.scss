@@ -11,3 +11,55 @@
     }
   }
 }
+
+@mixin breakpoint-tablet {
+  @include breakpoint($tablet, min) {
+    @include breakpoint($laptop, max) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-mobile {
+  @include breakpoint($tablet, max) {
+    @content;
+  }
+}
+
+/*Доолнительные breakpoints*/
+
+@mixin breakpoint-laptop-extra {
+  @include breakpoint($laptop-extra, min) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet-extra {
+  @include breakpoint($laptop-min, min) {
+    @include breakpoint($laptop, max) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-tablet-min {
+  @include breakpoint($tablet, min) {
+    @include breakpoint($laptop-min, max) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-mobile-extra {
+  @include breakpoint($mobile, min) {
+    @include breakpoint($tablet, max) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-mobile-min {
+  @include breakpoint($mobile-extra, max) {
+    @content;
+  }
+}

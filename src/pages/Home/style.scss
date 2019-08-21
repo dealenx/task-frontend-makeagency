@@ -12,10 +12,25 @@
 
   &__sidebar {
     grid-area: sidebar;
+    margin-top: 168px;
   }
 
   &__content {
     grid-area: content;
+  }
+
+  @include breakpoint-tablet {
+    grid-template-columns: 230px 1fr;
+    &__sidebar {
+      margin-top: 100px;
+    }
+  }
+
+  @include breakpoint-mobile {
+    grid-template-areas: "content content";
+    &__sidebar {
+      display: none;
+    }
   }
 }
 
