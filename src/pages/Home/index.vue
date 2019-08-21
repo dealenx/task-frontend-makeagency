@@ -20,6 +20,7 @@
         <h3>Десктоп (1200+)</h3>
 
         <div class="site-home__subsection-grid">
+          <div class="site-home__subsection-grid-info"></div>
           <img src="@/assets/img/site-home/grid/laptop.jpg" alt />
         </div>
       </div>
