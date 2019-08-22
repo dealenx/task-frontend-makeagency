@@ -5,4 +5,14 @@
 
 .ui-grid {
   @include grid;
+
+  grid-template-columns: repeat(var(--default-columns-counts), 1fr);
+
+  @include breakpoint-tablet {
+    grid-template-columns: repeat(var(--tablet-columns-counts), 1fr);
+  }
+
+  @include breakpoint-mobile {
+    grid-template-columns: repeat(var(--mobile-columns-counts), 1fr);
+  }
 }

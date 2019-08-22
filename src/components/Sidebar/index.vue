@@ -1,5 +1,5 @@
 <template>
-  <ul class="sidebar-ul" v-bind:class="{ 'stick': scrollY > 190 }">
+  <ul class="sidebar-ul" v-bind:class="{ 'stick': scrollY > 175 }">
     <li class="active">
       <a href="#">Напутственное слово</a>
     </li>

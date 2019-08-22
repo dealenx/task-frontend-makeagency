@@ -1,13 +1,15 @@
 @mixin grid {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 32px;
   grid-template-columns: repeat(12, 1fr);
 
   @include breakpoint-tablet {
     grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
   }
 
   @include breakpoint-mobile {
+    grid-gap: 24px;
     grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -8,10 +8,10 @@
 
   &__sidebar {
     margin-top: 168px;
+    position: relative;
   }
 
   @include breakpoint-tablet {
-    grid-template-columns: 230px 1fr;
     &__sidebar {
       margin-top: 100px;
     }
@@ -28,26 +28,27 @@
     margin-top: 48px;
     margin-bottom: 16px;
 
-    & > h3 {
+    h3 {
       margin-top: 16px;
     }
-    & > p {
+    p {
       margin-top: 64px;
     }
   }
   &__section {
     margin-top: 60px;
 
-    & > p {
-      margin-top: 24px;
-    }
-
     & > h3 {
       margin-top: 48px;
     }
   }
 
+  &__section-desc {
+    margin-top: 24px;
+  }
+
   &__subsection-grid {
+    margin-top: 48px;
     img {
       margin-top: 64px;
       max-width: 100%;
@@ -55,10 +56,16 @@
     }
   }
   &__subsection-grid-info {
-    display: flex;
-    flex-direction: column;
+    margin-top: 32px;
+    /*display: flex;
+    flex-direction: column;*/
     p {
       @include p-14;
+      color: #7d7d7d;
+    }
+    span {
+      margin-top: 7px;
+      @include p-lead;
     }
   }
 }
