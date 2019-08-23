@@ -20,8 +20,10 @@
       <div class="site-header__lastname">Городилов</div>
       <div class="site-header__fullname">Даниил Владимирович</div>
     </div>
-
-    <button class="site-header__icomenu" @click="$refs.Menu.switchVisible()"></button>
+    <div class="site-header__right">
+      <SwitchDark ref="Menu" />
+      <button class="site-header__icomenu" @click="$refs.Menu.switchVisible()"></button>
+    </div>
 
     <Menu ref="Menu" />
   </header>
@@ -29,11 +31,13 @@
 
 <script>
 import Menu from "@/components/Menu";
+import SwitchDark from "@/components/SwitchDark";
 
 export default {
   name: "Header",
   components: {
-    Menu
+    Menu,
+    SwitchDark
   }
 };
 </script>

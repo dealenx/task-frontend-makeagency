@@ -33,6 +33,14 @@
     opacity: 0.76;
   }
 
+  @media (prefers-color-scheme: dark) {
+    background: #0e0e0e;
+
+    &::after {
+      opacity: 0.26;
+    }
+  }
+
   &__close {
     position: fixed;
     right: 63.03px;
@@ -53,7 +61,7 @@
     grid-template-rows: 88px 1fr 88px;
     grid-template-areas: "logo title" ". info" ". link";
 
-    background: #fff;
+    background: var(--main-bg-color);
     position: relative;
     width: 760px;
     height: calc(100% - 16px);

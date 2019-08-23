@@ -17,10 +17,10 @@
     margin-bottom: 16px;
 
     &.active a {
-      color: #3e29e3;
+      color: var(--primary-color);
 
       &:hover {
-        color: #3e29e3;
+        color: var(--primary-color);
       }
     }
   }

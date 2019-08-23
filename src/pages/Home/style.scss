@@ -92,6 +92,7 @@
     max-width: 100%;
     height: auto;
     @include grid-col(9, 6, 4);
+    filter: var(--img-filter);
   }
 }
 .grid-info {
@@ -120,7 +121,7 @@
     border-bottom: 1px solid #cbcbcc;
 
     li {
-      --color: #7d7d7d;
+      --color: var(--tabs-text-color);
       --display-active-line: none;
 
       cursor: pointer;
@@ -137,11 +138,11 @@
         height: 2px;
         position: absolute;
         content: "";
-        background: #3e29e3;
+        background: var(--primary-color);
       }
 
       &.active {
-        --color: #0e0d0d;
+        --color: var(--tabs-text-active-color);
         --display-active-line: block;
       }
     }
@@ -175,11 +176,13 @@
 .dev {
   width: 100%;
   height: 200px;
-  background: #f6f6f6;
-  color: #e0e0e0;
+  background: var(--home-dev-bg);
   margin-top: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  content: "В разработке";
+
+  h2 {
+    color: var(--home-dev-color);
+  }
 }
