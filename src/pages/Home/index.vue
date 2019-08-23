@@ -12,9 +12,7 @@
 
       <div class="site-section">
         <h2>Сетка</h2>
-        <p
-          class="site-section__desc"
-        >Задание предполагает адаптивную вёрстку. Используется 3 состояния в зависимости от устройства. Сетка «резиновая» — переменной ширины.</p>
+        <p>Задание предполагает адаптивную вёрстку. Используется 3 состояния в зависимости от устройства. Сетка «резиновая» — переменной ширины.</p>
 
         <div class="site-subsection grid">
           <h3>Десктоп (1200+)</h3>
@@ -88,18 +86,36 @@
           <img src="@/assets/img/site-home/grid/mobile.jpg" alt />
         </div>
       </div>
+
+      <div class="site-section">
+        <h2>Типография</h2>
+        <p>Используется шрифт Graphik. На телефонах стили типографики переопределяются</p>
+
+        <tabs ref="Tabs" :tabs="['tab-1', 'tab-2']">
+          <a @click="$refs.Tabs.makeActive('tab-1')">Механическая очистка</a>
+          <a @click="$refs.Tabs.makeActive('tab-2')">Пескоструйная обработка</a>
+
+          <template v-slot:tab-1>
+            <h2>Механическая очистка</h2>
+          </template>
+          <template v-slot:tab-2>
+            <h2>Пескоструйная обработка</h2>
+          </template>
+        </tabs>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Sidebar from "@/components/Sidebar";
-//import { Grid, GridCol } from "@/components/UI";
+import { Tabs } from "@/components/UI";
 
 export default {
   name: "Home",
   components: {
-    Sidebar
+    Sidebar,
+    Tabs
   }
 };
 </script>

@@ -62,7 +62,7 @@
     margin-top: 48px;
   }
 
-  &__desc {
+  & > p {
     @include grid-col(6, 6, 4);
     margin-top: 24px;
   }
