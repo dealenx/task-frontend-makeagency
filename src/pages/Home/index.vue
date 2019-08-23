@@ -91,16 +91,23 @@
         <h2>Типография</h2>
         <p>Используется шрифт Graphik. На телефонах стили типографики переопределяются</p>
 
-        <tabs ref="Tabs" :tabs="['tab-1', 'tab-2']">
-          <a @click="$refs.Tabs.makeActive('tab-1')">Механическая очистка</a>
-          <a @click="$refs.Tabs.makeActive('tab-2')">Пескоструйная обработка</a>
+        <tabs class="site-subsection tabs" activeTab="tab-1">
+          <ul class="site-tabs__nav">
+            <li tab-link="tab-1">
+              <a>Компьютер</a>
+            </li>
+            <li tab-link="tab-2">
+              <a>Телефон</a>
+            </li>
+          </ul>
 
-          <template v-slot:tab-1>
+          <div tab-content="tab-1">
             <h2>Механическая очистка</h2>
-          </template>
-          <template v-slot:tab-2>
+          </div>
+
+          <div tab-content="tab-2">
             <h2>Пескоструйная обработка</h2>
-          </template>
+          </div>
         </tabs>
       </div>
     </div>

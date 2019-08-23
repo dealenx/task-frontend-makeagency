@@ -69,15 +69,14 @@
 }
 
 .site-subsection {
-  @include grid(9, 6, 4);
-}
-.site-subsection.grid {
   margin-top: 48px;
+  @include grid(9, 6, 4);
 
   & > * {
     @include grid-col(9, 6, 4);
   }
-
+}
+.site-subsection.grid {
   img {
     margin-top: 64px;
     max-width: 100%;
@@ -98,6 +97,44 @@
     span {
       margin-top: 7px;
       @include p-lead;
+    }
+  }
+}
+
+.site-tabs {
+  &__nav {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    height: 38px;
+    border-bottom: 1px solid #cbcbcc;
+
+    li {
+      margin-right: 32px;
+      position: relative;
+
+      a {
+        color: #7d7d7d;
+        font-weight: 500;
+      }
+
+      &.active {
+        padding-bottom: 14px;
+
+        a {
+          color: #1b1b1b;
+        }
+
+        &:after {
+          left: 0;
+          bottom: 0px;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          content: "";
+          background: #3e29e3;
+        }
+      }
     }
   }
 }
