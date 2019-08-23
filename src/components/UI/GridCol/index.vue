@@ -40,9 +40,9 @@ export default {
   computed: {
     cssVars() {
       return {
-        "--my-size": "span " + this.size,
-        "--my-tablet-size": "span " + this.checkTabletSizePropry(),
-        "--my-mobile-size": "span " + this.checkMobileSizePropry()
+        "--my-size": "" + this.size,
+        "--my-tablet-size": "" + this.checkTabletSizePropry(),
+        "--my-mobile-size": "" + this.checkMobileSizePropry()
       };
     }
   },

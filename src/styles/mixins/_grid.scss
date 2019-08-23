@@ -1,15 +1,27 @@
-@mixin grid {
+@mixin grid($laptop: 12, $tablet: 8, $mobile: 4) {
   display: grid;
   grid-gap: 32px;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat($laptop, 1fr);
 
   @include breakpoint-tablet {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat($tablet, 1fr);
     grid-gap: 10px;
   }
 
   @include breakpoint-mobile {
     grid-gap: 24px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat($mobile, 1fr);
+  }
+}
+
+@mixin grid-col($laptop: 1, $tablet: $laptop, $mobile: $laptop) {
+  grid-column: span $laptop;
+
+  @include breakpoint-tablet {
+    grid-column: span $tablet;
+  }
+
+  @include breakpoint-mobile {
+    grid-column: span $mobile;
   }
 }
