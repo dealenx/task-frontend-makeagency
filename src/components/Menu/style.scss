@@ -105,7 +105,7 @@
     border-radius: 50%;
     height: 40px;
     width: 40px;
-    background: #ff3a62;
+    background: var(--logo-bg);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
 
     @include breakpoint(900px, max) {
@@ -146,7 +146,7 @@
   &__link-button {
     @include p-16;
     font-weight: 500;
-    color: #3e29e3;
+    color: var(--primary-color);
     display: flex;
     flex-direction: row;
     align-items: center;
