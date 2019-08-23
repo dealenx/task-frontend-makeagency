@@ -1,5 +1,37 @@
 @include font-face("Graphik", "~@/assets/fonts/Graphik/Graphik-Regular-Web");
 
+/*
+ * Noto Sans Kannada (Kannada) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: "Noto Sans Kannada";
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Regular.eot?#iefix)
+      format("embedded-opentype"),
+    url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Regular.woff2)
+      format("woff2"),
+    url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Regular.woff)
+      format("woff"),
+    url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Regular.ttf)
+      format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans Kannada";
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Bold.eot?#iefix)
+      format("embedded-opentype"),
+    url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Bold.woff2)
+      format("woff2"),
+    url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Bold.woff)
+      format("woff"),
+    url(//fonts.gstatic.com/ea/notosanskannada/v3/NotoSansKannada-Bold.ttf)
+      format("truetype");
+}
+
 @include font-face(
   "Graphik",
   "~@/assets/fonts/Graphik/Graphik-RegularItalic-Web",
@@ -37,6 +69,14 @@ h1 {
     font-size: 32px;
     line-height: 40px;
   }
+  &.laptop {
+    font-size: 48px !important;
+    line-height: 56px !important;
+  }
+  &.mobile {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
 }
 h2 {
   font-size: 32px;
@@ -46,6 +86,14 @@ h2 {
   @include breakpoint($tablet, max) {
     font-size: 28px;
     line-height: 36px;
+  }
+  &.laptop {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  &.mobile {
+    font-size: 28px !important;
+    line-height: 36px !important;
   }
 }
 h3 {
@@ -57,6 +105,14 @@ h3 {
     font-size: 20px;
     line-height: 28px;
   }
+  &.laptop {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  &.mobile {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
 }
 h4 {
   font-size: 18px;
@@ -66,6 +122,14 @@ h4 {
   @include breakpoint($tablet, max) {
     font-size: 18px;
     line-height: 28px;
+  }
+  &.laptop {
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+  &.mobile {
+    font-size: 18px !important;
+    line-height: 28px !important;
   }
 }
 
@@ -77,6 +141,14 @@ h4 {
     font-size: 20px;
     line-height: 28px;
   }
+  &.laptop {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  &.mobile {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
 }
 
 @mixin p-18 {
@@ -86,6 +158,14 @@ h4 {
   @include breakpoint($tablet, max) {
     font-size: 18px;
     line-height: 28px;
+  }
+  &.laptop {
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+  &.mobile {
+    font-size: 18px !important;
+    line-height: 28px !important;
   }
 }
 
@@ -97,6 +177,14 @@ h4 {
     font-size: 16px;
     line-height: 24px;
   }
+  &.laptop {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+  &.mobile {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
 }
 
 @mixin p-14 {
@@ -107,4 +195,33 @@ h4 {
     font-size: 14px;
     line-height: 20px;
   }
+  &.laptop {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+  &.mobile {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}
+
+.p-lead {
+  @include p-lead;
+}
+.p-14 {
+  @include p-14;
+}
+
+.p-16 {
+  @include p-16;
+}
+.p-18 {
+  @include p-18;
+}
+
+.emoji {
+  height: 1.3em;
+  width: 1.3em;
+  margin: 0 0.2em 0 0.2em;
+  vertical-align: -0.1em;
 }
