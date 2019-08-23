@@ -5,9 +5,16 @@
 
 .site-home {
   @include wrap;
+  @include grid(12, 8, 4);
 
   &__sidebar {
+    @include grid-col(3, 2);
     margin-top: 168px;
+    position: relative;
+  }
+
+  &__content {
+    @include grid-col(9, 6);
     position: relative;
   }
 
@@ -25,40 +32,65 @@
   }
 
   &__main-info {
+    @include grid(9, 6, 4);
     margin-top: 48px;
     margin-bottom: 16px;
+
+    & > * {
+      @include grid-col(9, 6, 4);
+    }
 
     h3 {
       margin-top: 16px;
     }
     p {
+      @include grid-col(6, 6, 4);
       margin-top: 64px;
     }
   }
-  &__section {
-    margin-top: 60px;
+}
 
-    & > h3 {
-      margin-top: 48px;
-    }
+.site-section {
+  @include grid(9, 6, 4);
+  margin-top: 80px;
+
+  & > * {
+    @include grid-col(9, 6, 4);
   }
 
-  &__section-desc {
+  & > h3 {
+    margin-top: 48px;
+  }
+
+  &__desc {
+    @include grid-col(6, 6, 4);
     margin-top: 24px;
   }
+}
 
-  &__subsection-grid {
-    margin-top: 48px;
-    img {
-      margin-top: 64px;
-      max-width: 100%;
-      height: auto;
-    }
+.site-subsection {
+  @include grid(9, 6, 4);
+}
+.site-subsection.grid {
+  margin-top: 48px;
+
+  & > * {
+    @include grid-col(9, 6, 4);
   }
-  &__subsection-grid-info {
-    margin-top: 32px;
-    /*display: flex;
-    flex-direction: column;*/
+
+  img {
+    margin-top: 64px;
+    max-width: 100%;
+    height: auto;
+    @include grid-col(9, 6, 4);
+  }
+}
+.grid-info {
+  @include grid(9, 6, 4);
+  margin-top: 32px;
+
+  .grid-info__item {
+    @include grid-col(2, 3, 2);
     p {
       @include p-14;
       color: #7d7d7d;
