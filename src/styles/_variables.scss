@@ -32,6 +32,8 @@ $laptop-min: 1000px;
   --input-error-color: #e80f3b;
   --input-focus-placeholder-color: #d1d1d1;
   --input-focus-label-color: #7d7d7d;
+
+  --selectbox-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="dark"] {
@@ -55,4 +57,6 @@ $laptop-min: 1000px;
   --img-filter: grayscale(1) invert(1);
 
   --input-focus-placeholder-color: #505050;
+
+  --selectbox-shadow: 0px 8px 16px rgb(9, 9, 9);
 }

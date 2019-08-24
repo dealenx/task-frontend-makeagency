@@ -244,8 +244,9 @@
         </div>
         <div class="site-subsection ui">
           <h3>Выпадающее меню</h3>
-          <div class="dev">
-            <h2>В разработке</h2>
+          <div class="ui-col-3-3-4">
+            <p class="ui-desc"></p>
+            <SelectBox />
           </div>
         </div>
         <div class="site-subsection ui">
@@ -274,7 +275,7 @@
 
 <script>
 import Sidebar from "@/components/Sidebar";
-import { Tabs, Input } from "@/components/UI";
+import { Tabs, Input, SelectBox } from "@/components/UI";
 import twemoji from "twemoji";
 
 export default {
@@ -282,7 +283,8 @@ export default {
   components: {
     Sidebar,
     Tabs,
-    Input
+    Input,
+    SelectBox
   },
   mounted() {
     twemoji.parse(document.getElementsByClassName("site-home__footer")[0]);

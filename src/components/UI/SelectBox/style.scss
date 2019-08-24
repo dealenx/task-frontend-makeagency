@@ -1,0 +1,91 @@
+////
+/// @group vue-UI-SelectBox
+/// @author dealenx
+////
+
+/* The container must be positioned relative: */
+.container-select {
+  position: relative;
+}
+
+.container-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  height: 36px;
+  @include p-16;
+  line-height: 24px;
+  cursor: pointer;
+  border-bottom: 2px solid #aeadae;
+  transition: border 0.13s ease-in;
+}
+.container-select:hover {
+  .select-selected {
+    border-bottom: 2px solid var(--primary-color);
+  }
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  width: 9px;
+  right: 0;
+  bottom: 12px;
+  height: 6px;
+  background-image: url("~@/assets/img/select-box/arrow-bottom.png");
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+
+/* style the items (options), including the selected item: */
+.select-items div {
+  color: var(--main-text-color);
+  height: 40px;
+  @include p-16;
+  padding: 6px 24px;
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  display: none;
+  position: absolute;
+  background: var(--main-bg-color);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: var(--selectbox-shadow);
+  transition: display 0.13s ease-in;
+
+  div:nth-child(2) {
+    padding-top: 10px;
+  }
+}
+
+.container-select.select-show {
+  .select-items {
+    display: block;
+  }
+  .select-selected {
+    border-bottom: 2px solid var(--primary-color);
+  }
+  .select-selected:after {
+    background-image: url("~@/assets/img/select-box/arrow-top.png");
+  }
+}
+
+/* Hide the items when the select box is closed: */
+
+.select-items div:hover {
+  color: var(--primary-color);
+}
+
+.select-items div.same-as-selected {
+  background: var(--primary-color);
+  color: #fff;
+}
