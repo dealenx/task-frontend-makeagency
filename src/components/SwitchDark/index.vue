@@ -8,6 +8,7 @@
 </template>
 
 <script>
+document.documentElement.classList.add("transition");
 export default {
   name: "SwitchDark",
   mounted() {
@@ -25,6 +26,7 @@ export default {
     }
 
     function switchTheme(e) {
+      //window.setTimeout(() => {
       if (e.target.checked) {
         document.documentElement.setAttribute("data-theme", "dark");
         localStorage.setItem("theme", "dark");
@@ -32,6 +34,7 @@ export default {
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.setItem("theme", "light");
       }
+      //}, 1000);
     }
 
     toggleSwitch.addEventListener("change", switchTheme, false);

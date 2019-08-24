@@ -13,6 +13,9 @@ $laptop-min: 1000px;
   --main-headers-color: var(--main-text-color);
   --main-menu-but-color: #000;
 
+  --selected-bg-color: #222;
+  --selected-text-color: #fff;
+
   --logo-bg: #ff3a62;
 
   --home-dev-bg: #f6f6f6;
@@ -24,11 +27,11 @@ $laptop-min: 1000px;
   --tabs-text-active-color: #1b1b1b;
 
   --img-filter: grayscale(0) invert(0);
-  /*--primary-color: #302AE6;
-    --secondary-color: #536390;
-    --font-color: #424242;
-    --bg-color: #fff;
-    --heading-color: #292922;*/
+
+  --input-primary-color: var(--primary-color);
+  --input-error-color: #e80f3b;
+  --input-focus-placeholder-color: #d1d1d1;
+  --input-focus-label-color: #7d7d7d;
 }
 
 [data-theme="dark"] {
@@ -36,6 +39,9 @@ $laptop-min: 1000px;
   --main-text-color: #dbdbdb;
   --main-headers-color: #ffffff;
   --main-menu-but-color: #fff;
+
+  --selected-bg-color: var(--primary-color);
+  --selected-text-color: #fff;
 
   --logo-bg: #2f2f2f;
 
@@ -47,9 +53,6 @@ $laptop-min: 1000px;
   --tabs-text-active-color: #f5f5f5;
 
   --img-filter: grayscale(1) invert(1);
-  /*--primary-color: #9A97F3;
-    --secondary-color: #818cab;
-    --font-color: #e1e1ff;
-    --bg-color: #161625;
-    --heading-color: #818cab;*/
+
+  --input-focus-placeholder-color: #505050;
 }

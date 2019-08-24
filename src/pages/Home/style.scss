@@ -186,3 +186,18 @@
     color: var(--home-dev-color);
   }
 }
+
+.site-subsection.ui {
+  .ui-col-3-3-4 {
+    margin-top: 32px;
+    @include grid-col(3, 3, 4);
+    display: flex;
+    flex-direction: column;
+  }
+  .ui-desc {
+    @include p-14;
+    height: 20px;
+    color: #7d7d7d;
+    margin-bottom: 40px;
+  }
+}

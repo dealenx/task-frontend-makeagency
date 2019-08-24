@@ -231,31 +231,36 @@
         <a class="anchor" name="ui"></a>
         <h2>UI</h2>
 
-        <div class="site-subsection">
+        <div class="site-subsection ui">
           <h3>Текстовое поле</h3>
-          <div class="dev">
-            <h2>В разработке</h2>
+          <div class="ui-col-3-3-4">
+            <p class="ui-desc"></p>
+            <Input value />
+          </div>
+          <div class="ui-col-3-3-4">
+            <p class="ui-desc">Ошибка</p>
+            <Input value="officemake.st" />
           </div>
         </div>
-        <div class="site-subsection">
+        <div class="site-subsection ui">
           <h3>Выпадающее меню</h3>
           <div class="dev">
             <h2>В разработке</h2>
           </div>
         </div>
-        <div class="site-subsection">
+        <div class="site-subsection ui">
           <h3>Кнопка</h3>
           <div class="dev">
             <h2>В разработке</h2>
           </div>
         </div>
-        <div class="site-subsection">
+        <div class="site-subsection ui">
           <h3>Чекбокс, радиобаттон</h3>
           <div class="dev">
             <h2>В разработке</h2>
           </div>
         </div>
-        <div class="site-subsection">
+        <div class="site-subsection ui">
           <h3>Аккордеон</h3>
           <div class="dev">
             <h2>В разработке</h2>
@@ -269,14 +274,15 @@
 
 <script>
 import Sidebar from "@/components/Sidebar";
-import { Tabs } from "@/components/UI";
+import { Tabs, Input } from "@/components/UI";
 import twemoji from "twemoji";
 
 export default {
   name: "Home",
   components: {
     Sidebar,
-    Tabs
+    Tabs,
+    Input
   },
   mounted() {
     twemoji.parse(document.getElementsByClassName("site-home__footer")[0]);

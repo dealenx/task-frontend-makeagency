@@ -412,16 +412,13 @@ button,
 input,
 select,
 textarea {
-  color: #222;
 }
 
 ::-moz-selection {
-  background: #b3d4fc;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
   text-shadow: none;
 }
 
@@ -441,8 +438,6 @@ textarea {
 
 .chromeframe {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
   padding: 0.2em 0;
 }
 

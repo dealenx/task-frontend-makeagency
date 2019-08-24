@@ -6,7 +6,14 @@ body {
   height: 100%;
   width: 100%;
 }
-
+/*html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: ease-in-out 300ms;
+  transition-delay: 0;
+}
+*/
 #app {
   display: flex;
   flex-direction: column;
@@ -16,11 +23,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include p-16;
-  color: var(--main-text-color);
+  color: var(--main-headers-color);
   overflow-y: scroll;
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
+}
+/*html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: color ease 1000ms;
+  transition-delay: 100ms;
+}*/
+
+::selection {
+  background-color: var(--selected-bg-color);
+  color: var(--selected-text-color);
 }
 
 a {
